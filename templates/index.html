@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Flask Application using Docker">
+  <meta name="author" content="Ahmedur Rahman Shovon">
+
+  <title>Flask Application using Docker</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">
+              This is a Flask Application deployable with Docker. It uses Bootstrap templates.
+            </p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://arshovon.com/" class="text-white">
+                  <i class="fa fa-web"></i> arshovon.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:shovon.sylhet@gmail.com" class="text-white">
+                  <i class="fa fa-email"></i> shovon.sylhet@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <strong>FDB</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Flask Docker App with Bootstrap Templates</h1>
+        <p class="lead text-muted">
+          Flask Application with Docker configuration.
+          The App uses Bootstrap templates and static files.
+        </p>
+      </div>
+    </section>
+
+    <div class="py-5">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top img-thumbnail"
+              src="{{ url_for('static', filename='images/flask.svg') }}"
+              alt="Flask Logo"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ./col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top img-thumbnail"
+              src="{{ url_for('static', filename='images/docker.png') }}"
+              alt="Docker Logo"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ./col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top img-thumbnail"
+              src="{{ url_for('static', filename='images/bootstrap.png') }}"
+              alt="Bootstrap Logo"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Bootstrap is a free and open-source CSS framework directed at
+                  responsive, mobile-first front-end web development.
+                  It contains CSS- and JavaScript-based design templates
+                   for typography, forms, buttons, navigation, and other interface components.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ./col-md-4 -->
+
+        </div>
+        <!-- ./row -->
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src={{ url_for('static', filename='js/bootstrap.min.js') }}></script>
+</body>
+</html>
