@@ -24,6 +24,7 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 # main.py will run when container starts up on the device
 # CMD ["python","-u","src/main.py"]
 
+ENV UDEV=1
 
 LABEL Author="Ahmedur Rahman Shovon"
 LABEL E-mail="shovon.sylhet@gmail.com"
@@ -33,12 +34,13 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV FLASK_APP "app.py"
 ENV FLASK_ENV "development"
 ENV FLASK_DEBUG True
+ENV FLASK_RUN_PORT 80
 
 RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
-EXPOSE 5000
+EXPOSE 80
 
 CMD flask run --host=0.0.0.0
